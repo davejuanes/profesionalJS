@@ -191,3 +191,11 @@ Y finalmente necesitamos la primera que gane la petición:
 const movie = await Promise.race(moviePromises);
 return movie;
 ```
+Ahora para renderizar la promesa con las peliculas, es necesario un array para esto realizaremos el envío a ```renderMovies``` del un array con los datos de la pelicula ```[(movie)]```, finalemnte tenemos al modificación a nuestro DOM con el siguiente código:
+```
+document.getElementById('fastest').onclick = async function() {
+    const movie = await getFastestTopMovie();
+    renderMovies([movie]);
+};
+```
+No siempre el primero de la lista puede ser el primero que se renderice.
