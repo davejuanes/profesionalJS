@@ -44,3 +44,6 @@ set muted(value) {
     this.media.muted = value;
 }
 ```
+Los getters y los setters son utiles para obtener propiedades virtuales que no existen directamente, que atravez de un computo podemos obtenerlos.
+
+Con un setter asignandole un valores podemos obtener un valor designado. 
